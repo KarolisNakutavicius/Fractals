@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fractals</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+ <body onload="draw();">
+   <h1>Fractal drawing</h1>
+   <canvas id="canvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+   <p>You can re-draw the image using 1-8 drawing loops</p>
+   <button type="button" onclick="reDraw()">Initial</button>
+   <button type="button" onclick="transform()">Transform</button>
+   <input id="stepField" type="range" min="1" max="8" value ="8" onchange="document.getElementById('currentStepValue').innerHTML = value"/>
+   <label for="stepField" id="currentStepValue">8</label>
+ </body>
+
+ <script src="index.js"></script>
+
+</html>
+
+</html>
