@@ -25,22 +25,22 @@ function drawF(step) {
 
     //ctx.transform(0.5, 0, 0, -0.5, 0, 0);
     ctx.transform(0, -0.5, -0.5, 0, 250, 250);
-    partColor(step, "red");
+    changeColor(step, "red");
     drawF(step);
     ctx.restore();
 
     ctx.transform(0.25, 0, 0, 0.25, 0, 375);
-    partColor(step, "blue");
+    changeColor(step, "blue");
     drawF(step);
     ctx.restore();
 
     ctx.transform(-0.5, 0, 0, -0.5, 500, 500);
-    partColor(step, "green");
+    changeColor(step, "green");
     drawF(step);
     ctx.restore();
 
     ctx.transform(0, 0.5, 0.5, 0, 250, 0);
-    partColor(step, "purple");
+    changeColor(step, "purple");
     drawF(step);
   } else {
     drawShape();
@@ -77,14 +77,13 @@ function drawShape() {
   ctx.closePath();
 }
 
-function partColor(step, color) {
+function changeColor(step, color) {
   if (step === stepCount - 1) {
     ctx.fillStyle = color;
   }
 }
 
 function clear(){
-  
   if (ctx != null)
   {
     ctx.clearRect(0, 0, 500, 500);
