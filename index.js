@@ -23,7 +23,6 @@ function drawF(step) {
     ctx.save();
     ctx.save();
 
-    //ctx.transform(0.5, 0, 0, -0.5, 0, 0);
     ctx.transform(0, -0.5, -0.5, 0, 250, 250);
     changeColor(step, "red");
     drawF(step);
